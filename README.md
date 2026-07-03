@@ -1,12 +1,12 @@
 # rss-vk-proxy-go
 
-A small Go service that turns public Telegram channel pages into VK-friendly RSS feeds — without RSSHub.
+A small Go service that turns public Telegram channel pages into VK-friendly RSS feeds.
 
 It fetches Telegram's public web view (`https://t.me/s/<channel>`), extracts posts, converts Telegram HTML into readable plain text, and serves an RSS 2.0 feed that is easier for VK importers and other simple RSS consumers to digest.
 
 ## Why
 
-RSSHub is great, but for this use case it was one more external dependency. This service is designed to be self-hosted, fast, boring, and predictable:
+There is RSSHub, and it is great, but for this use case it was one more external dependency. This service is designed to be self-hosted, fast, boring, and predictable:
 
 - direct Telegram public-page fetches;
 - plain-text descriptions instead of heavy HTML;
