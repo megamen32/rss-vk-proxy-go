@@ -1,0 +1,16 @@
+# Build artifacts
+/rss-vk-proxy-go
+*.exe
+*.test
+*.out
+
+# Runtime cache: Telegram HTML/media URLs may contain temporary tokens
+/cache/
+
+# Local/editor files
+.env
+.env.*
+!.env.example
+.DS_Store
+.idea/
+.vscode/

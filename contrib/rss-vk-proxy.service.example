@@ -1,0 +1,23 @@
+[Unit]
+Description=RSS VK-friendly proxy for Telegram direct feeds
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=roomhacker
+Group=roomhacker
+WorkingDirectory=/home/roomhacker/PycharmProjects/rss-vk-proxy-go
+Environment=HTTPS_PROXY=http://192.168.2.1:3128
+Environment=HTTP_PROXY=http://192.168.2.1:3128
+Environment=RSSVK_CACHE_DIR=/home/roomhacker/PycharmProjects/rss-vk-proxy-go/cache
+ExecStart=/home/roomhacker/PycharmProjects/rss-vk-proxy-go/rss-vk-proxy-go 127.0.0.1:18766
+Restart=always
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ReadWritePaths=/home/roomhacker/PycharmProjects/rss-vk-proxy-go/cache
+
+[Install]
+WantedBy=multi-user.target
